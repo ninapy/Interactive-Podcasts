@@ -18,7 +18,7 @@ transcription = client.audio.transcriptions.create(
     model="whisper-1",
     response_format="verbose_json",
     timestamp_granularities=["word"]
-    # prompt="might include prompting later for better results"
+    # TODO: prompt="might include prompting later for better results"
 )
 
 output = {
@@ -30,7 +30,7 @@ output = {
 }
 
 output_file = open("transcript.json", "w") # write
-json.dump(output, output_file)
+json.dump(output, output_file, indent=2)
 output_file.close()
 
-print(transcription.words)
+print(json.dumps(transcription.words, indent=2))
