@@ -21,6 +21,8 @@ transcription = client.audio.transcriptions.create(
     # TODO: prompt="might include prompting later for better results"
 )
 
+audio_file.close()
+
 output = {
     "text": transcription.text,
     "words": [

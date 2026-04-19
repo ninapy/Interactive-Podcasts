@@ -12,6 +12,7 @@ client = OpenAI()
 
 transcript_file = open("transcript.json", "r")
 transcript = json.load(transcript_file)
+transcript_file.close()
 
 full_text = transcript["text"]
 words = transcript["words"]
