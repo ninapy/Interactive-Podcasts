@@ -5,3 +5,6 @@ Enhanced Listening: Interactive Podcasts. This tool uses AI (Whisper &amp; Gemin
 
 Is Your Personality Fixed, Or Can You Change Who You Are (Invisibilia NPR)
 https://www.youtube.com/watch?v=nMmiXaER9ko
+
+Twinkling Stars Sound Effect
+https://www.youtube.com/watch?v=okMJSAxfOzc
