@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What did Walter Mischel say the point of the marshmallow test was?",
+    "answer": "Flexibility",
+    "insert_after_word_index": 76,
+    "insert_after_timestamp": 34.040000915527344,
+    "question_audio_path": "question_audio/question_1.mp3",
+    "answer_audio_path": "question_audio/answer_1.mp3"
+  },
+  {
+    "question": "According to Mischel, what is the single most important thing he has stood for?",
+    "answer": "Human flexibility",
+    "insert_after_word_index": 144,
+    "insert_after_timestamp": 60.939998626708984,
+    "question_audio_path": "question_audio/question_2.mp3",
+    "answer_audio_path": "question_audio/answer_2.mp3"
+  }
+]

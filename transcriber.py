@@ -11,7 +11,7 @@ if not os.getenv("OPENAI_API_KEY"):
     raise ValueError("OPENAI_API_KEY not found on .env file")
 
 client = OpenAI()
-audio_file = open("episode.mp3", "rb") # read binary
+audio_file = open("episode.m4a", "rb") # read binary
 
 transcription = client.audio.transcriptions.create(
     file=audio_file,
@@ -35,4 +35,4 @@ output_file = open("transcript.json", "w") # write
 json.dump(output, output_file, indent=2)
 output_file.close()
 
-print(json.dumps(transcription.words, indent=2))
+print(json.dumps(output["words"], indent=2))

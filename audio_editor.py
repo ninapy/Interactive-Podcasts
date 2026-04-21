@@ -6,7 +6,7 @@ PAUSE_DURATION_MS = 12000  # 12 seconds, in ms
 # TODO: duration pause should be backed up by litterature, if possible
 
 # source: https://github.com/jiaaro/pydub
-podcast = AudioSegment.from_mp3("episode.mp3")
+podcast = AudioSegment.from_file("episode.m4a")
 
 questions_file = open("questions.json", "r")
 questions = json.load(questions_file)
@@ -44,5 +44,5 @@ for q in questions:
 # add remaining podcast after last question
 result += podcast[curr:]
 
-result.export("output/episode_interactive.mp3", format="mp3")
-print(f"\nDone. Saved to output/episode_interactive.mp3")
+result.export("output/episode_interactive.m4a", format="mp4")
+print(f"\nDone. Saved to output/episode_interactive.m4a")

@@ -1,18 +1,66 @@
 [
   {
-    "question": "What did Walter Mischel say the point of the marshmallow test was?",
-    "answer": "Flexibility",
-    "insert_after_word_index": 76,
-    "insert_after_timestamp": 34.040000915527344,
+    "question": "What highly sought-after product earned the early Celtic civilizations a strong reputation among the Romans? A) Intricately carved Venus figurines B) High-quality steel C) Advanced ship-building techniques D) Mined silver and gold coins",
+    "answer": "B) High-quality steel",
+    "insert_after_word_index": 213,
+    "insert_after_timestamp": 71.69999694824219,
     "question_audio_path": "question_audio/question_1.mp3",
     "answer_audio_path": "question_audio/answer_1.mp3"
   },
   {
-    "question": "According to Mischel, what is the single most important thing he has stood for?",
-    "answer": "Human flexibility",
-    "insert_after_word_index": 144,
-    "insert_after_timestamp": 60.939998626708984,
+    "question": "What did the term 'Osterriechi', the root of Austria's modern German name, mean? A) Eastern Realm B) Mountain Kingdom C) Land of the Danube D) Holy Territory",
+    "answer": "A) Eastern Realm",
+    "insert_after_word_index": 322,
+    "insert_after_timestamp": 132.17999267578125,
     "question_audio_path": "question_audio/question_2.mp3",
     "answer_audio_path": "question_audio/answer_2.mp3"
+  },
+  {
+    "question": "Approximately how long did the Habsburg dynasty go on to rule Austria? A) 150 years B) 300 years C) 450 years D) 640 years",
+    "answer": "D) 640 years",
+    "insert_after_word_index": 407,
+    "insert_after_timestamp": 180.63999938964844,
+    "question_audio_path": "question_audio/question_3.mp3",
+    "answer_audio_path": "question_audio/answer_3.mp3"
+  },
+  {
+    "question": "The Habsburgs reached their peak in the 17th century largely due to intermarrying. What major issue did this strategy eventually cause? A) It bankrupted the empire. B) The Spanish branch suffered genetic issues, failed to produce an heir, and died out. C) The Pope excommunicated the family. D) It led to an armed rebellion by Austrian peasants.",
+    "answer": "B) The Spanish branch suffered genetic issues, failed to produce an heir, and died out.",
+    "insert_after_word_index": 490,
+    "insert_after_timestamp": 242.8800048828125,
+    "question_audio_path": "question_audio/question_4.mp3",
+    "answer_audio_path": "question_audio/answer_4.mp3"
+  },
+  {
+    "question": "In 1867, what event forced the Austrian Empire to share power and change its name to Austria-Hungary? A) The Kingdom of Hungary won parliamentary autonomy and territorial sovereignty. B) Emperor Franz Joseph I was assassinated. C) The Holy Roman Empire was dissolved by Napoleon. D) The Russian Empire invaded the eastern borders.",
+    "answer": "A) The Kingdom of Hungary won parliamentary autonomy and territorial sovereignty.",
+    "insert_after_word_index": 573,
+    "insert_after_timestamp": 276.5,
+    "question_audio_path": "question_audio/question_5.mp3",
+    "answer_audio_path": "question_audio/answer_5.mp3"
+  },
+  {
+    "question": "Which of the following best describes the initial domino effect that started World War I? A) Austria-Hungary attacked Belgium B) Germany threatened Serbia C) Austria-Hungary threatened Serbia D) The Ottoman Empire invaded the Balkans",
+    "answer": "C) Austria-Hungary threatened Serbia",
+    "insert_after_word_index": 648,
+    "insert_after_timestamp": 324.1000061035156,
+    "question_audio_path": "question_audio/question_6.mp3",
+    "answer_audio_path": "question_audio/answer_6.mp3"
+  },
+  {
+    "question": "What happened to Austria immediately after World War II? A) It was split into East and West Austria. B) It was occupied and divided into four zones by the Allied forces until 1955. C) It was immediately granted neutral independent status by the UN. D) It became a permanent territory of the Soviet Union.",
+    "answer": "B) It was occupied and divided into four zones by the Allied forces until 1955.",
+    "insert_after_word_index": 761,
+    "insert_after_timestamp": 445.2799987792969,
+    "question_audio_path": "question_audio/question_7.mp3",
+    "answer_audio_path": "question_audio/answer_7.mp3"
+  },
+  {
+    "question": "In Austria's modern political system, what does a party need in order to govern the National Council and put forward the Chancellor? A) Unanimous approval of the nine provincial legislatures B) A mandate or majority in the National Council C) Direct approval of the European Parliament D) A two-thirds vote from the Federal Council",
+    "answer": "B) A mandate or majority in the National Council",
+    "insert_after_word_index": 862,
+    "insert_after_timestamp": 509.8599853515625,
+    "question_audio_path": "question_audio/question_8.mp3",
+    "answer_audio_path": "question_audio/answer_8.mp3"
   }
 ]

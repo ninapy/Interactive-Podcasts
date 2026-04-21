@@ -23,7 +23,7 @@ for i, q in enumerate(questions):
     question_text = f"Take a second to think about this question: {q['question']}"
     answer_text = f"Great work! The answer is: {q['answer']}"
 
-    # source: https://developers.openai.com/api/docs/guides/text-to-speech
+    # source: https://developeres.openai.com/api/docs/guides/text-to-speech
     # TODO: we might want to change the voice. check: https://www.openai.fm/
     question_response = client.audio.speech.create(
         model="tts-1",
