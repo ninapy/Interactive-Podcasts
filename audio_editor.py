@@ -2,11 +2,12 @@ import json
 from pathlib import Path
 from pydub import AudioSegment
 
-PAUSE_DURATION_MS = 12000  # 12 seconds, in ms
+PAUSE_DURATION_MS = 6000  # 6 seconds, in ms
+SILENCE = 1000
 # TODO: duration pause should be backed up by litterature, if possible
 
 # source: https://github.com/jiaaro/pydub
-podcast = AudioSegment.from_file("episode.m4a")
+podcast = AudioSegment.from_mp3("episode.mp3")
 
 questions_file = open("questions.json", "r")
 questions = json.load(questions_file)
@@ -26,16 +27,26 @@ for q in questions:
     # add podcast segment up to insertion point
     result += podcast[curr:end_segment]
 
+    # add sound effect before question
+    ding = AudioSegment.from_mp3("ding.mp3")
+    result += ding
+
     # add question audio
     question_audio = AudioSegment.from_mp3(q["question_audio_path"])
     result += question_audio
 
-    # add 12 second pause for listener to think
+    # add pause for listener to think
     result += AudioSegment.silent(duration=PAUSE_DURATION_MS)
 
     # add answer audio
-    answer_audio = AudioSegment.from_mp3(q["answer_audio_path"])
-    result += answer_audio
+    # answer_audio = AudioSegment.from_mp3(q["answer_audio_path"])
+    # result += answer_audio
+
+    # add silence after answer
+    result += AudioSegment.silent(duration=SILENCE)
+
+    # add sound effect after question
+    result += ding
 
     # move pointer
     curr = end_segment
@@ -44,5 +55,5 @@ for q in questions:
 # add remaining podcast after last question
 result += podcast[curr:]
 
-result.export("output/episode_interactive.m4a", format="mp4")
-print(f"\nDone. Saved to output/episode_interactive.m4a")
+result.export("output/episode_interactive.mp3", format="mp3")
+print(f"\nDone. Saved to output/episode_interactive.mp3")

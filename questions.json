@@ -1,66 +1,50 @@
 [
   {
-    "question": "What highly sought-after product earned the early Celtic civilizations a strong reputation among the Romans? A) Intricately carved Venus figurines B) High-quality steel C) Advanced ship-building techniques D) Mined silver and gold coins",
-    "answer": "B) High-quality steel",
+    "question": "Based on the early history discussed, describe the significance of the Stone Age artifacts currently displayed in Vienna's Natural History Museum, and explain what later innovation earned the local Celtic cultures a strong reputation with the Romans.",
     "insert_after_word_index": 213,
     "insert_after_timestamp": 71.69999694824219,
-    "question_audio_path": "question_audio/question_1.mp3",
-    "answer_audio_path": "question_audio/answer_1.mp3"
+    "question_audio_path": "question_audio/question_1.mp3"
   },
   {
-    "question": "What did the term 'Osterriechi', the root of Austria's modern German name, mean? A) Eastern Realm B) Mountain Kingdom C) Land of the Danube D) Holy Territory",
-    "answer": "A) Eastern Realm",
+    "question": "Following the fall of the Roman Empire and centuries of contested occupation, the Babenbergs assumed control in 976. How did this era give rise to the modern German name for Austria, \u00d6sterreich?",
     "insert_after_word_index": 322,
-    "insert_after_timestamp": 132.17999267578125,
-    "question_audio_path": "question_audio/question_2.mp3",
-    "answer_audio_path": "question_audio/answer_2.mp3"
+    "insert_after_timestamp": 132.86000061035156,
+    "question_audio_path": "question_audio/question_2.mp3"
   },
   {
-    "question": "Approximately how long did the Habsburg dynasty go on to rule Austria? A) 150 years B) 300 years C) 450 years D) 640 years",
-    "answer": "D) 640 years",
+    "question": "Following the end of the Babenberg male line and the chaotic period known as the interregnum, who ultimately took control of the region in 1278, and what was the historical significance of this new dynasty's reign?",
     "insert_after_word_index": 407,
     "insert_after_timestamp": 180.63999938964844,
-    "question_audio_path": "question_audio/question_3.mp3",
-    "answer_audio_path": "question_audio/answer_3.mp3"
+    "question_audio_path": "question_audio/question_3.mp3"
   },
   {
-    "question": "The Habsburgs reached their peak in the 17th century largely due to intermarrying. What major issue did this strategy eventually cause? A) It bankrupted the empire. B) The Spanish branch suffered genetic issues, failed to produce an heir, and died out. C) The Pope excommunicated the family. D) It led to an armed rebellion by Austrian peasants.",
-    "answer": "B) The Spanish branch suffered genetic issues, failed to produce an heir, and died out.",
+    "question": "Explain the marriage and family planning strategy utilized by the House of Habsburg. What was its primary geopolitical benefit, and what major negative consequence ultimately led to the loss of their Spanish territories in the 17th century?",
     "insert_after_word_index": 490,
     "insert_after_timestamp": 242.8800048828125,
-    "question_audio_path": "question_audio/question_4.mp3",
-    "answer_audio_path": "question_audio/answer_4.mp3"
+    "question_audio_path": "question_audio/question_4.mp3"
   },
   {
-    "question": "In 1867, what event forced the Austrian Empire to share power and change its name to Austria-Hungary? A) The Kingdom of Hungary won parliamentary autonomy and territorial sovereignty. B) Emperor Franz Joseph I was assassinated. C) The Holy Roman Empire was dissolved by Napoleon. D) The Russian Empire invaded the eastern borders.",
-    "answer": "A) The Kingdom of Hungary won parliamentary autonomy and territorial sovereignty.",
+    "question": "What specific events and political shifts in the 19th century\u2014culminating in 1867\u2014prompted the Austrian Empire to change its name and structure to the dual monarchy of Austria-Hungary?",
     "insert_after_word_index": 573,
     "insert_after_timestamp": 276.5,
-    "question_audio_path": "question_audio/question_5.mp3",
-    "answer_audio_path": "question_audio/answer_5.mp3"
+    "question_audio_path": "question_audio/question_5.mp3"
   },
   {
-    "question": "Which of the following best describes the initial domino effect that started World War I? A) Austria-Hungary attacked Belgium B) Germany threatened Serbia C) Austria-Hungary threatened Serbia D) The Ottoman Empire invaded the Balkans",
-    "answer": "C) Austria-Hungary threatened Serbia",
+    "question": "The assassination of Archduke Franz Ferdinand in 1914 acted as a catalyst for World War I. Based on the transcript, briefly outline the chain reaction of European alliances that turned this local conflict into a global war.",
     "insert_after_word_index": 648,
     "insert_after_timestamp": 324.1000061035156,
-    "question_audio_path": "question_audio/question_6.mp3",
-    "answer_audio_path": "question_audio/answer_6.mp3"
+    "question_audio_path": "question_audio/question_6.mp3"
   },
   {
-    "question": "What happened to Austria immediately after World War II? A) It was split into East and West Austria. B) It was occupied and divided into four zones by the Allied forces until 1955. C) It was immediately granted neutral independent status by the UN. D) It became a permanent territory of the Soviet Union.",
-    "answer": "B) It was occupied and divided into four zones by the Allied forces until 1955.",
+    "question": "Describe the political and territorial status of Austria immediately following the end of World War II in 1945, prior to the signing of the Austrian State Treaty in 1955.",
     "insert_after_word_index": 761,
     "insert_after_timestamp": 445.2799987792969,
-    "question_audio_path": "question_audio/question_7.mp3",
-    "answer_audio_path": "question_audio/answer_7.mp3"
+    "question_audio_path": "question_audio/question_7.mp3"
   },
   {
-    "question": "In Austria's modern political system, what does a party need in order to govern the National Council and put forward the Chancellor? A) Unanimous approval of the nine provincial legislatures B) A mandate or majority in the National Council C) Direct approval of the European Parliament D) A two-thirds vote from the Federal Council",
-    "answer": "B) A mandate or majority in the National Council",
+    "question": "In Austria's current parliamentary republic (the Second Republic), explain the relationship between the National Council (Nationalrat) and the process of selecting the nation's Chancellor.",
     "insert_after_word_index": 862,
     "insert_after_timestamp": 509.8599853515625,
-    "question_audio_path": "question_audio/question_8.mp3",
-    "answer_audio_path": "question_audio/answer_8.mp3"
+    "question_audio_path": "question_audio/question_8.mp3"
   }
 ]

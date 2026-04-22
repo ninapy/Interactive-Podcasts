@@ -8,3 +8,6 @@ https://www.youtube.com/watch?v=nMmiXaER9ko
 
 Twinkling Stars Sound Effect
 https://www.youtube.com/watch?v=okMJSAxfOzc
+
+Ding - Sound Effect
+https://www.youtube.com/watch?v=Fu82s5DnhBc
