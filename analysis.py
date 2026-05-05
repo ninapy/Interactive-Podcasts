@@ -53,7 +53,7 @@ if p_val_anova < 0.05:
     print(tukey)
     print("\n")
 
-## POWER ANALYSIS (FRQ vs. MCQ vs. None) ##
+# Power Analysis
 
 all_groups = [frq_group_scores, mcq_group_scores, no_question_group_scores]
 all_scores = frq_group_scores + mcq_group_scores + no_question_group_scores
