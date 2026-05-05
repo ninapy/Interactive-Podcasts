@@ -1,6 +1,9 @@
 import pandas as pd
 from scipy import stats
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
+import numpy as np
+import math
+from statsmodels.stats.power import FTestAnovaPower
 
 
 ## GENERAL RESULTS ##
@@ -50,7 +53,29 @@ if p_val_anova < 0.05:
     print(tukey)
     print("\n")
 
+## POWER ANALYSIS (FRQ vs. MCQ vs. None) ##
 
+all_groups = [frq_group_scores, mcq_group_scores, no_question_group_scores]
+all_scores = frq_group_scores + mcq_group_scores + no_question_group_scores
+tot_mean = np.mean(all_scores)
+k_groups = len(all_groups)
+
+ssb = 0
+ssw = 0
+
+for group in all_groups:
+    group_mean = np.mean(group)
+    n_group = len(group)
+    ssb += n_group * (group_mean - tot_mean)**2
+    ssw += np.sum((np.array(group)-group_mean)**2)
+sst = ssb+ssw
+eta_sq = ssb / sst
+coh_f = math.sqrt(eta_sq / (1-eta_sq))
+pow_analysis = FTestAnovaPower()
+tot_sample_size = pow_analysis.solve_power(effect_size = coh_f, k_groups = k_groups, alpha = 0.05, power = 0.80)
+n_per_group = math.ceil (tot_sample_size/k_groups)
+print("--Power Analysis--")
+print(f"Required N per group: {n_per_group} participants")
 
 # ----
 
