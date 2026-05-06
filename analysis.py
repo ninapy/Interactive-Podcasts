@@ -169,6 +169,8 @@ t_paired, p_paired = stats.ttest_rel(all_notes_frq, all_notes_mcq)
 
 print(f"--- Format Comparison (Note-takers) ---")
 print(f"FRQ Section vs MCQ Section: t={t_paired:.4f}, p={p_paired:.4f}")
+print(f"Mean FRQ (Note-takers): {sum(all_notes_frq)/len(all_notes_frq):.4f}")
+print(f"Mean MCQ (Note-takers): {sum(all_notes_mcq)/len(all_notes_mcq):.4f}")
 print("\n")
 
 ### non note-takers analysis ###
@@ -191,4 +193,6 @@ t_paired_no, p_paired_no = stats.ttest_rel(all_no_notes_frq, all_no_notes_mcq)
 
 print(f"--- Format Comparison (Non Note-takers) ---")
 print(f"FRQ Section vs MCQ Section: t={t_paired_no:.4f}, p={p_paired_no:.4f}")
+print(f"Mean FRQ (Non Note-takers): {sum(all_no_notes_frq)/len(all_no_notes_frq):.4f}")
+print(f"Mean MCQ (Non Note-takers): {sum(all_no_notes_mcq)/len(all_no_notes_mcq):.4f}")
 print("\n")
