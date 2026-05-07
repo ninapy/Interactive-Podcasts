@@ -6,54 +6,60 @@ PAUSE_DURATION_MS = 6000  # 6 seconds, in ms
 SILENCE = 1000
 # TODO: duration pause should be backed up by litterature, if possible
 
-# source: https://github.com/jiaaro/pydub
-podcast = AudioSegment.from_mp3("episode.mp3")
 
-questions_file = open("questions.json", "r")
-questions = json.load(questions_file)
-questions_file.close()
+def edit_podcast():
+    # source: https://github.com/jiaaro/pydub
+    podcast = AudioSegment.from_mp3("episode.mp3")
 
-# sort questions by timestamp
-questions = sorted(questions, key=lambda q: q["insert_after_timestamp"])
+    questions_file = open("questions.json", "r")
+    questions = json.load(questions_file)
+    questions_file.close()
 
-Path("output").mkdir(exist_ok=True)
+    # sort questions by timestamp
+    questions = sorted(questions, key=lambda q: q["insert_after_timestamp"])
 
-result = AudioSegment.empty()
-curr = 0  # keep track of location on original podcast, in ms
+    Path("output").mkdir(exist_ok=True)
 
-for q in questions:
-    end_segment = int(q["insert_after_timestamp"] * 1000)  # convert s to ms
+    result = AudioSegment.empty()
+    curr = 0  # keep track of location on original podcast, in ms
 
-    # add podcast segment up to insertion point
-    result += podcast[curr:end_segment]
+    for q in questions:
+        end_segment = int(q["insert_after_timestamp"] * 1000)  # convert s to ms
 
-    # add sound effect before question
-    ding = AudioSegment.from_mp3("ding.mp3")
-    result += ding
+        # add podcast segment up to insertion point
+        result += podcast[curr:end_segment]
 
-    # add question audio
-    question_audio = AudioSegment.from_mp3(q["question_audio_path"])
-    result += question_audio
+        # add sound effect before question
+        ding = AudioSegment.from_mp3("ding.mp3")
+        result += ding
 
-    # add pause for listener to think
-    result += AudioSegment.silent(duration=PAUSE_DURATION_MS)
+        # add question audio
+        question_audio = AudioSegment.from_mp3(q["question_audio_path"])
+        result += question_audio
 
-    # add answer audio
-    # answer_audio = AudioSegment.from_mp3(q["answer_audio_path"])
-    # result += answer_audio
+        # add pause for listener to think
+        result += AudioSegment.silent(duration=PAUSE_DURATION_MS)
 
-    # add silence after answer
-    result += AudioSegment.silent(duration=SILENCE)
+        # add answer audio
+        # answer_audio = AudioSegment.from_mp3(q["answer_audio_path"])
+        # result += answer_audio
 
-    # add sound effect after question
-    result += ding
+        # add silence after answer
+        result += AudioSegment.silent(duration=SILENCE)
 
-    # move pointer
-    curr = end_segment
-    print(f"Inserted question at {q['insert_after_timestamp']:.1f}s: {q['question']}")
+        # add sound effect after question
+        result += ding
 
-# add remaining podcast after last question
-result += podcast[curr:]
+        # move pointer
+        curr = end_segment
+        print(f"Inserted question at {q['insert_after_timestamp']:.1f}s: {q['question']}")
 
-result.export("output/episode_interactive.mp3", format="mp3")
-print(f"\nDone. Saved to output/episode_interactive.mp3")
+    # add remaining podcast after last question
+    result += podcast[curr:]
+
+    result.export("output/episode_interactive.mp3", format="mp3")
+    print(f"\nDone. Saved to output/episode_interactive.mp3")
+
+if __name__ == "__main__":
+    edit_podcast()
+    

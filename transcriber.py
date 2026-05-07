@@ -11,28 +11,34 @@ if not os.getenv("OPENAI_API_KEY"):
     raise ValueError("OPENAI_API_KEY not found on .env file")
 
 client = OpenAI()
-audio_file = open("episode.m4a", "rb") # read binary
 
-transcription = client.audio.transcriptions.create(
-    file=audio_file,
-    model="whisper-1",
-    response_format="verbose_json",
-    timestamp_granularities=["word"]
-    # TODO: prompt="might include prompting later for better results"
-)
+def transcribe_audio(file_path="episode.mp3"):
+    audio_file = open(file_path, "rb") # read binary
 
-audio_file.close()
+    transcription = client.audio.transcriptions.create(
+        file=audio_file,
+        model="whisper-1",
+        response_format="verbose_json",
+        timestamp_granularities=["word"]
+        # TODO: prompt="might include prompting later for better results"
+    )
 
-output = {
-    "text": transcription.text,
-    "words": [
-        {"word": w.word, "start": w.start, "end": w.end}
-        for w in transcription.words
-    ]
-}
+    audio_file.close()
 
-output_file = open("transcript.json", "w") # write
-json.dump(output, output_file, indent=2)
-output_file.close()
+    output = {
+        "text": transcription.text,
+        "words": [
+            {"word": w.word, "start": w.start, "end": w.end}
+            for w in transcription.words
+        ]
+    }
 
-print(json.dumps(output["words"], indent=2))
+    output_file = open("transcript.json", "w") # write
+    json.dump(output, output_file, indent=2)
+    output_file.close()
+
+    print(json.dumps(output["words"], indent=2))
+
+if __name__ == "__main__":
+    transcribe_audio("audio.mp3")
+    

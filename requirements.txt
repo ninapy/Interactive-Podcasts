@@ -1,2 +1,7 @@
 python-dotenv
 openai
+pydub
+pandas
+scipy
+statsmodels
+numpy
