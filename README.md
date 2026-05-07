@@ -12,7 +12,7 @@ Enhanced Listening: Interactive Podcasts. This tool uses AI to transform standar
 
 - `run_pipeline.py`: runs all four steps in sequence. See usage instructions below.
 
-- `analysis.py` and `visualizations.ipynb`: contains the statistical analysis for the experiment testing the tool's effectiveness on information retention, including ANOVA, t-tests, and performance breakdowns by group and question format and their corresponding visualizations.
+- `analysis/analysis.py` and `analysis/visualizations.ipynb`: contains the statistical analysis for the experiment testing the tool's effectiveness on information retention, including ANOVA, t-tests, and performance breakdowns by group and question format and their corresponding visualizations.
 
 ## Install Dependencies
 

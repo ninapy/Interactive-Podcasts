@@ -10,7 +10,7 @@ if not os.getenv("OPENAI_API_KEY"):
 
 client = OpenAI()
 
-def generate_questions(transcript_path="transcript.json"):
+def generate_questions(transcript_path="./output/temp_files/transcript.json"):
   transcript_file = open(transcript_path, "r")
   transcript = json.load(transcript_file)
   transcript_file.close()
@@ -71,7 +71,7 @@ def generate_questions(transcript_path="transcript.json"):
       idx = q["insert_after_word_index"] # get word index to insert question after
       q["insert_after_timestamp"] = words[idx]["end"] # add timestamp for when to insert question, from original transcript
 
-  output_file = open("questions.json", "w")
+  output_file = open("./output/temp_files/questions.json", "w")
   json.dump(questions, output_file, indent=2)
   output_file.close()
 

@@ -13,11 +13,11 @@ client = OpenAI()
 
 def generate_audio_for_questions():
 
-    questions_file = open("questions.json", "r")
+    questions_file = open("./output/temp_files/questions.json", "r")
     questions = json.load(questions_file)
     questions_file.close()
 
-    output_dir = Path("question_audio")
+    output_dir = Path("./output/temp_files/question_audio")
     output_dir.mkdir(exist_ok=True) # create folder if it doesn't exist
 
     for i, q in enumerate(questions):
@@ -33,7 +33,7 @@ def generate_audio_for_questions():
             input=question_text
             # TODO: instructions="may add instructions later for better results"
         )
-        question_path = output_dir / f"quequastion_{i + 1}.mp3"
+        question_path = output_dir / f"question_{i + 1}.mp3"
         question_response.stream_to_file(question_path)
 
         # generate answer audio
@@ -49,7 +49,7 @@ def generate_audio_for_questions():
         # q["answer_audio_path"] = str(answer_path)
         print(f"Audio generated for question {i + 1}. ")
 
-    output_file = open("questions.json", "w")
+    output_file = open("./output/temp_files/questions.json", "w")
     json.dump(questions, output_file, indent=2)
     output_file.close()
 

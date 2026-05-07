@@ -2,6 +2,7 @@
 
 import json
 import os
+from pathlib import Path
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -13,6 +14,7 @@ if not os.getenv("OPENAI_API_KEY"):
 client = OpenAI()
 
 def transcribe_audio(file_path="episode.mp3"):
+    Path("./output/temp_files").mkdir(parents=True, exist_ok=True)
     audio_file = open(file_path, "rb") # read binary
 
     transcription = client.audio.transcriptions.create(
@@ -33,12 +35,12 @@ def transcribe_audio(file_path="episode.mp3"):
         ]
     }
 
-    output_file = open("transcript.json", "w") # write
+    output_file = open("./output/temp_files/transcript.json", "w") # write
     json.dump(output, output_file, indent=2)
     output_file.close()
 
     print(json.dumps(output["words"], indent=2))
 
 if __name__ == "__main__":
-    transcribe_audio("audio.mp3")
+    transcribe_audio()
     

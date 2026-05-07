@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 from pydub import AudioSegment
 
 PAUSE_DURATION_MS = 6000  # 6 seconds, in ms
@@ -11,14 +10,12 @@ def edit_podcast():
     # source: https://github.com/jiaaro/pydub
     podcast = AudioSegment.from_mp3("episode.mp3")
 
-    questions_file = open("questions.json", "r")
+    questions_file = open("./output/temp_files/questions.json", "r")
     questions = json.load(questions_file)
     questions_file.close()
 
     # sort questions by timestamp
     questions = sorted(questions, key=lambda q: q["insert_after_timestamp"])
-
-    Path("output").mkdir(exist_ok=True)
 
     result = AudioSegment.empty()
     curr = 0  # keep track of location on original podcast, in ms
@@ -30,7 +27,7 @@ def edit_podcast():
         result += podcast[curr:end_segment]
 
         # add sound effect before question
-        ding = AudioSegment.from_mp3("ding.mp3")
+        ding = AudioSegment.from_mp3("./effects/ding.mp3")
         result += ding
 
         # add question audio
